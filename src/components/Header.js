@@ -11,7 +11,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-export default function Header() {
+export default function Header({ children }) {
   return (
     <>
       {/* <div className="logo">StockToBye</div>
@@ -23,7 +23,7 @@ export default function Header() {
           </Grid>
 
           <Grid item xs={3}>
-            <Item>Login | Signup</Item>
+            <Item>{children}</Item>
           </Grid>
         </Grid>
       </Box>

@@ -5,7 +5,7 @@ import { useEarthoOne } from '@eartho/one-client-react';
 export default function App() {
   const { isLoading, isConnected, error, user, connectWithPopup, logout } =
     useEarthoOne();
-
+  console.log(user);
   if (isLoading) {
     return <div>Loading...</div>;
   }
@@ -15,21 +15,43 @@ export default function App() {
   if (isConnected) {
     return (
       <div>
-        Hello {user.displayName}{' '}
-        <button onClick={() => logout({ returnTo: window.location.origin })}>
-          Log out
-        </button>
+        <div>
+          <Header>
+            Hello {user.displayName}{' '}
+            <button
+              onClick={() => logout({ returnTo: window.location.origin })}
+            >
+              Log out
+            </button>
+          </Header>
+
+          <BasicTable title="Day Stock Prediction" />
+          <BasicTable title="Week Stock Prediction" />
+          <BasicTable title="Quarter Stock Prediction" />
+          <Footer />
+        </div>
       </div>
     );
   } else {
     return (
-      <button
-        className="btn btn-outline-success"
-        id="login"
-        onClick={() => connectWithPopup({ access_id: 'Xk6ye43Ygg6EdjhhVn5z' })}
-      >
-        Log in
-      </button>
+      <>
+        <Header>
+          <button
+            className="btn btn-outline-success"
+            id="login"
+            onClick={() =>
+              connectWithPopup({ access_id: 'Xk6ye43Ygg6EdjhhVn5z' })
+            }
+          >
+            Log in
+          </button>
+        </Header>
+
+        <BasicTable title="Day Stock Prediction" />
+        <BasicTable title="Week Stock Prediction" />
+        <BasicTable title="Quarter Stock Prediction" />
+        <Footer />
+      </>
     );
   }
 
