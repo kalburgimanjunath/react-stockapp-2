@@ -26,7 +26,7 @@ export default function App() {
       <button
         className="btn btn-outline-success"
         id="login"
-        onClick={() => connectWithPopup({ access_id: 'sdQZUMJ02XuHVTfg0h64' })}
+        onClick={() => connectWithPopup({ access_id: 'Xk6ye43Ygg6EdjhhVn5z' })}
       >
         Log in
       </button>
