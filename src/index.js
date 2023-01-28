@@ -3,13 +3,16 @@ import { createRoot } from 'react-dom/client';
 
 import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { EarthoOneProvider } from '@eartho/one-client-react';
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
     <Router>
-      <App />
+      <EarthoOneProvider clientId="RZ0oW9iUYYxCSjxFQHmy">
+        <App />
+      </EarthoOneProvider>
     </Router>
   </StrictMode>
 );
