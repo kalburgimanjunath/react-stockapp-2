@@ -8,6 +8,7 @@
     "@emotion/styled": "^11.10.5",
     "@fontsource/roboto": "^4.5.8",
     "@mui/material": "^5.11.6",
+    "@mui/material/Box": "*",
     "@types/react": "^17.0.0 || ^18.0.0",
     "fbjs": "^0.2.1",
     "material-ui": "^0.12.2",
