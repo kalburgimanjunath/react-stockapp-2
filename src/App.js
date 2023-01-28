@@ -1,13 +1,12 @@
 import React from 'react';
 import './style.css';
-import BasicTable from './components';
+import BasicTable from './components/index';
 export default function App() {
   return (
     <div>
-      <h1>Day Stock Prediction</h1>
-
-      <h1>Week Stock Prediction</h1>
-      <h1>Quarter Stock Prediction</h1>
+      <BasicTable title="Day Stock Prediction" />
+      <BasicTable title="Week Stock Prediction" />
+      <BasicTable title="Quarter Stock Prediction" />
     </div>
   );
 }
